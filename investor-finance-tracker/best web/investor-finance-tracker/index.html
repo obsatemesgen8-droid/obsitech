@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>IFTS — Investor Finance Tracker</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body class="auth-page">
+  <main class="container center">
+    <div class="card auth-card">
+      <div class="brand">
+        <img src="assets/icons/logo.jpeg" alt="logo" class="logo" onerror="this.style.display='none';" />
+        <h1>WELCOME</h1>
+        <p class="muted">INVESTOR FINANCE TRACKER SYSTEM</p>
+      </div>
+
+      <div class="auth-forms">
+        <form id="loginForm" class="form">
+          <img src="assets/icons/logo.jpeg" alt="logo" class="logo" onerror="this.style.display='none';" />
+      
+          <h2>Sign in</h2>
+          <label>Email
+            <input type="email" id="loginEmail" required />
+          </label>
+          <label>Password
+            <input type="password" id="loginPassword" required />
+          </label>
+          <button type="submit" class="btn primary">Login</button>
+        </form>
+
+        <form id="registerForm" class="form hidden">
+          <h2>Create account</h2>
+          <label>Full name
+            <input type="text" id="regName" required />
+          </label>
+          <label>Email
+            <input type="email" id="regEmail" required />
+          </label>
+          <label>Password
+            <input type="password" id="regPassword" required />
+          </label>
+          <button type="submit" class="btn">Register</button>
+        </form>
+
+        <p class="switcher">
+          <a href="#" id="showRegister">Create new account</a> ·
+          <a href="#" id="showLogin" class="hidden">Have account? Login</a>
+        </p>
+      
+  </main>
+
+  <script src="js/auth.js"></script>
+</body>
+</html>

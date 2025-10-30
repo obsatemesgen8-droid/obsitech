@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Transactions — IFTS</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand-inline"><a href="dashboard.html">IFTS</a></div>
+      <nav class="nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="transactions.html" class="active">Transactions</a>
+        <a href="reports.html">Reports</a>
+        <a href="notifications.html">Notifications</a>
+        <a href="settings.html">Settings</a>
+      </nav>
+      <div class="user-controls">
+        <img id="profileImgSmall" class="profile-thumb" alt="profile"/>
+        <span id="userNameShort"></span>
+        <button id="logoutBtn" class="btn small">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container page-content">
+    <section class="card">
+      <h2>New Transaction</h2>
+      <div class="form-row">
+        <label>Asset
+          <select id="txAsset"></select>
+        </label>
+        <label>Type
+          <select id="txType">
+            <option value="deposit">Deposit / Buy</option>
+            <option value="withdraw">Withdraw / Sell</option>
+            <option value="interest">Interest / Dividend</option>
+          </select>
+        </label>
+        <label>Amount (ETB)
+          <input type="number" id="txAmount" step="0.01" min="0"/>
+        </label>
+        <label>Date
+          <input type="date" id="txDate"/>
+        </label>
+        <label>Note
+          <input id="txNote" placeholder="Optional"/>
+        </label>
+        <div class="form-actions">
+          <button id="addTxBtn" class="btn primary">Add Transaction</button>
+          <button id="clearTxBtn" class="btn">Clear</button>
+        </div>
+      </div>
+
+      <hr/>
+
+      <h3>Transactions</h3>
+      <div id="txList" class="table-scroll"></div>
+    </section>
+  </main>
+
+  <script src="js/transactions.js"></script>
+</body>
+</html>

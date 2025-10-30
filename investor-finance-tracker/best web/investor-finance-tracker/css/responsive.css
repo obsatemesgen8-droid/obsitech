@@ -1,0 +1,7 @@
+/* responsive helper file: small adjustments */
+@media (max-width:480px){
+  .brand-inline a{font-size:18px}
+  .btn{padding:8px 10px}
+  .card{padding:12px}
+  .big{font-size:18px}
+}

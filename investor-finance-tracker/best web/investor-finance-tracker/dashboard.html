@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dashboard — IFTS</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand-inline"><a href="dashboard.html">IFTS</a></div>
+      <nav class="nav">
+        <a href="dashboard.html" class="active">Dashboard</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="transactions.html">Transactions</a>
+        <a href="reports.html">Reports</a>
+        <a href="notifications.html">Notifications</a>
+        <a href="settings.html">Settings</a>
+      </nav>
+      <div class="user-controls">
+        <img id="profileImgSmall" class="profile-thumb" alt="profile"/>
+        <span id="userNameShort"></span>
+        <button id="logoutBtn" class="btn small">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container page-content">
+    <section class="cards-grid">
+      <div class="card small">
+        <h3>Total Portfolio</h3>
+        <p class="big" id="totalPortfolio">0 ETB</p>
+      </div>
+      <div class="card small">
+        <h3>Monthly P&L</h3>
+        <p class="big" id="monthlyPL">0 ETB</p>
+      </div>
+      <div class="card small">
+        <h3>Active Assets</h3>
+        <p class="big" id="activeAssets">0</p>
+      </div>
+      <div class="card small">
+        <h3>Upcoming Alerts</h3>
+        <p id="upcomingAlerts">0 items</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3>Portfolio Distribution</h3>
+      <canvas id="pieChart" height="50"></canvas>
+    </section>
+
+    <section class="card">
+      <h3>Value over time (simulated)</h3>
+      <canvas id="lineChart" height="60"></canvas>
+    </section>
+  </main>
+
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Settings — IFTS</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand-inline"><a href="dashboard.html">IFTS</a></div>
+      <nav class="nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="transactions.html">Transactions</a>
+        <a href="reports.html">Reports</a>
+        <a href="notifications.html">Notifications</a>
+        <a href="settings.html" class="active">Settings</a>
+      </nav>
+      <div class="user-controls">
+        <img id="profileImgSmall" class="profile-thumb" alt="profile"/>
+        <button id="logoutBtn" class="btn small">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container page-content">
+    <section class="card">
+      <h2>Account Settings</h2>
+
+      <div class="profile-section">
+        <img id="profilePreview" class="profile-avatar" alt="Profile image"/>
+        <label class="btn">
+          Change Profile Image
+          <input type="file" id="profileUpload" accept="image/*" hidden />
+        </label>
+      </div>
+
+      <div class="form-row">
+        <label>Full Name
+          <input id="settingsName" />
+        </label>
+        <label>Email (read-only)
+          <input id="settingsEmail" disabled />
+        </label>
+        <label>Password
+          <input type="password" id="settingsPassword" placeholder="Change password" />
+        </label>
+      </div>
+
+      <div class="form-actions">
+        <button id="saveSettings" class="btn primary">Save Changes</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/settings.js"></script>
+</body>
+</html>

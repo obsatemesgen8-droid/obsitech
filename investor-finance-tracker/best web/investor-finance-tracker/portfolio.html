@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — IFTS</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand-inline"><a href="dashboard.html">IFTS</a></div>
+      <nav class="nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="portfolio.html" class="active">Portfolio</a>
+        <a href="transactions.html">Transactions</a>
+        <a href="reports.html">Reports</a>
+        <a href="notifications.html">Notifications</a>
+        <a href="settings.html">Settings</a>
+      </nav>
+      <div class="user-controls">
+        <img id="profileImgSmall" class="profile-thumb" alt="profile"/>
+        <span id="userNameShort"></span>
+        <button id="logoutBtn" class="btn small">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container page-content">
+    <section class="card">
+      <h2>My Assets</h2>
+      <div class="form-row">
+        <label>Type
+          <select id="assetType">
+            <option value="savings">Bank Savings</option>
+            <option value="bond">Government Bond</option>
+            <option value="share">Company Share</option>
+          </select>
+        </label>
+        <label>Name
+          <input id="assetName" placeholder="e.g., Commercial Bank FD"/>
+        </label>
+        <label>Quantity / Amount
+          <input type="number" id="assetAmount" min="0" step="0.01"/>
+        </label>
+        <label>Current Value (ETB)
+          <input type="number" id="assetValue" min="0" step="0.01"/>
+        </label>
+        <label>Notes
+          <input id="assetNotes"/>
+        </label>
+        <div class="form-actions">
+          <button id="addAssetBtn" class="btn primary">Add asset</button>
+          <button id="updateAssetBtn" class="btn hidden">Update</button>
+          <button id="clearAssetBtn" class="btn">Clear</button>
+        </div>
+      </div>
+
+      <hr/>
+
+      <div id="assetsList" class="table-scroll"></div>
+    </section>
+  </main>
+
+  <script src="js/portfolio.js"></script>
+</body>
+</html>

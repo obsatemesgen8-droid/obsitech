@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Reports — IFTS</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand-inline"><a href="dashboard.html">IFTS</a></div>
+      <nav class="nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="transactions.html">Transactions</a>
+        <a href="reports.html" class="active">Reports</a>
+        <a href="notifications.html">Notifications</a>
+        <a href="settings.html">Settings</a>
+      </nav>
+      <div class="user-controls">
+        <img id="profileImgSmall" class="profile-thumb" alt="profile"/>
+        <span id="userNameShort"></span>
+        <button id="logoutBtn" class="btn small">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container page-content">
+    <section class="card">
+      <h2>Reports</h2>
+      <div class="form-row">
+        <label>From
+          <input type="date" id="reportFrom"/>
+        </label>
+        <label>To
+          <input type="date" id="reportTo"/>
+        </label>
+        <div class="form-actions">
+          <button id="generateReport" class="btn primary">Generate</button>
+          <button id="exportCsv" class="btn">Export CSV</button>
+        </div>
+      </div>
+
+      <hr/>
+
+      <div id="reportArea">
+        <h3>Summary</h3>
+        <div id="reportSummary"></div>
+
+        <h3>Allocation</h3>
+        <canvas id="reportPie" height="130"></canvas>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/reports.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Notifications — IFTS</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand-inline"><a href="dashboard.html">IFTS</a></div>
+      <nav class="nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="transactions.html">Transactions</a>
+        <a href="reports.html">Reports</a>
+        <a href="notifications.html" class="active">Notifications</a>
+        <a href="settings.html">Settings</a>
+      </nav>
+      <div class="user-controls">
+        <img id="profileImgSmall" class="profile-thumb" alt="profile"/>
+        <span id="userNameShort"></span>
+        <button id="logoutBtn" class="btn small">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container page-content">
+    <section class="card">
+      <h2>Notifications & Reminders</h2>
+      <p class="muted">System will show near-term events (bond maturity, deposit expiry) here. You can add a custom reminder.</p>
+
+      <div class="form-row">
+        <label>Title <input id="noteTitle"/></label>
+        <label>Date <input type="date" id="noteDate"/></label>
+        <label>Note <input id="noteText"/></label>
+        <div class="form-actions">
+          <button id="addNote" class="btn primary">Add reminder</button>
+        </div>
+      </div>
+
+      <hr/>
+
+      <div id="notesList"></div>
+    </section>
+  </main>
+
+  <script src="js/notifications.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+// (portfolio.js) simplified placeholder - full behavior included in zip from earlier steps
