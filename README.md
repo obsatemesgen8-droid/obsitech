@@ -19,6 +19,6 @@
 ---
 
 ## 📫 Connect With Me
-- LinkedIn: [linkedin.com/in/obsatemesgen](https://linkedin.com/in/obsatemesgen)
-- GitHub: [github.com/ObsaTemesgen](https://github.com/ObsaTemesgen)
-- Email: obsatemesgen@gmail.com
+- LinkedIn: https://www.linkedin.com/in/obsa-temesgen-427299313
+- GitHub: https://github.com/OBSA-T
+- Email: obsatemesgen5@gmail.com
